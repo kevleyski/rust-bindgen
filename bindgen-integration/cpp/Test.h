@@ -1,3 +1,24 @@
+/* KJSL: todo
+Missing tests
+C++11/14/17/20 features: No use of modern features like auto, lambda expressions, range-based for loops, constexpr, nullptr, smart pointers, move semantics, or std::unique_ptr/std::shared_ptr.
+Templates (advanced): Only basic class templates are present; there are no template specializations, template template parameters, or variadic templates.
+Operator overloading: No overloaded operators (e.g., operator+, operator==).
+Namespaces (advanced): Only simple namespaces are used; no nested or anonymous namespaces.
+STL containers: No use of std::vector, std::map, or other standard library containers.
+Exception handling: No try, catch, or throw statements.
+Function overloading: Constructors are overloaded, but no overloaded free functions or member functions with the same name and different parameters.
+Inline functions: No use of the inline keyword.
+Friend classes/functions: No friend declarations.
+Access specifiers (protected/private inheritance): Only public inheritance is used; no protected or private inheritance.
+Virtual inheritance: No use of virtual base classes.
+Static assertions: No static_assert.
+C++ attributes: No use of attributes like [[nodiscard]], [[deprecated]], etc.
+Defaulted/deleted functions: Only defaulted constructor, no deleted functions.
+Function pointers, functors, or callbacks: Not present.
+C++ modules: Not used.
+*/
+
+
 #include "stub.h" // this bad path is made valid by a `-I include` clang arg
 
 #pragma once
@@ -20,7 +41,7 @@
         a
 //#define TESTMACRO_INVALID("string") // A conforming preprocessor rejects this
 #define TESTMACRO_STRING_EXPR ("string")
-#define TESTMACRO_STRING_FUNC_NON_UTF8(x) (x "ÿÿ") /* invalid UTF-8 on purpose */
+#define TESTMACRO_STRING_FUNC_NON_UTF8(x) (x "ï¿½ï¿½") /* invalid UTF-8 on purpose */
 
 enum {
   MY_ANNOYING_MACRO =
